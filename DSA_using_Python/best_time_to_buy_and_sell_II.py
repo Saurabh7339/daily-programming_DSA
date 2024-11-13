@@ -9,3 +9,5 @@ def maxProfit(prices) -> int:
 
 price_list = [7,1,5,3,6,4]
 print(maxProfit(price_list))
+
+
