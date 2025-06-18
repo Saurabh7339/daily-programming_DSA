@@ -8,7 +8,7 @@ class Node:
 class LinkedList:
 	def __init__(self):
 		self.head = None
-
+it 
 
 	def append_value(self,data):
 		node = Node(data)
