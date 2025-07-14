@@ -1,16 +1,21 @@
 class Solution:
     def longestCommonPrefix(self, arr1: List[int], arr2: List[int]) -> int:
-        max_prefix_length = float('-inf')
+        s = set()
         for i in arr1:
-            str_1 = str(i)
-            for j in arr2:
-                str_2 = str(j)
-                prefix_len = 0
-                for index in range(min(len(arr1 , arr2))):
-                    if str_1[index] == str_2[index]:
-                        prefix_len = prefix_len+1
-                if prefix_len>max_prefix_length:
-                    max_prefix_length=prefix_len
-        return max_prefix_length
+            strng = ""
+            for j in str(i):
+                strng+=j
+                s.add(strng)
+        max_length= 0
+        for i in arr2:
+            strng =""
+            for j in str(i):
+                strng+=j
+                if strng in s:
+                    store_len = len(strng)
+                    if store_len>max_length:
+                        max_length= store_len
+        return max_length
+                
 
         
